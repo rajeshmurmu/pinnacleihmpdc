@@ -1,0 +1,265 @@
+<div class="flex justify-center items-center w-full bg-white">
+  <a href="/">
+    <img
+      src="https://pinnacleimc.com/wp-content/uploads/2021/07/logo-final-1.png"
+      alt=""
+    />
+  </a>
+</div>
+
+<nav
+  class="bg-[#052c65] sticky -top-1 z-[1000] text-white w-full overflow-hidden"
+>
+  <div
+    class="nav-wrapper flex justify-end md:justify-center px-8 py-4 items-center"
+  >
+    <!-- this code is commented to hide the navbar logo -->
+    <!-- <div class="logo-container">
+      <div class="logo-wraper w-24 h-12">
+        <a href="/">
+          <img
+            class="w-full h-full"
+            src="https://pinnacleihm.com/wp-content/uploads/2020/06/pinnacle-logo-final-02.png"
+            alt="Pinnacle Logo"
+          />
+        </a>
+      </div>
+    </div> -->
+    <div class="menu-wrapper hidden md:block">
+      <ul class="menu-items flex gap-x-4 justify-center items-center">
+        <li class="text-lg font-semibold">
+          <a
+            class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700 text-green-600"
+            href="/"
+            >Home</a
+          >
+        </li>
+        <li class="text-lg font-semibold">
+          <a
+            class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
+            href="/about-us"
+            >About</a
+          >
+        </li>
+        <li class="text-lg font-semibold">
+          <a
+            class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
+            href="/contact-us"
+            >Contact</a
+          >
+        </li>
+        <li class="text-lg font-semibold">
+          <a
+            class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
+            href="/addmissions"
+            >Admissions</a
+          >
+        </li>
+        <li class="text-lg font-semibold relative group">
+          <a
+            class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
+            href="/courses"
+            >Courses</a
+          >
+          <ul
+            id="ignore"
+            class="fixed bg-[#052c65] hidden group-hover:block duration-300 py-2 px-4 z-50"
+          >
+            <li class="my-2">
+              <a
+                class="border-b-2 border-solid border-white hover:border-green-500"
+                href="/courses/bca"
+                >BCA</a
+              >
+            </li>
+            <li class="my-2">
+              <a
+                class="border-b-2 border-solid border-white hover:border-green-500"
+                href="/courses/bcom"
+                >B.Com</a
+              >
+            </li>
+            <li class="my-2">
+              <a
+                class="border-b-2 border-solid border-white hover:border-green-500"
+                href="/courses/bsc"
+                >B.Sc</a
+              >
+            </li>
+            <li class="my-2">
+              <a
+                class="border-b-2 border-solid border-white hover:border-green-500"
+                href="/courses/bhmct"
+                >BHMCT</a
+              >
+            </li>
+            <li class="my-2">
+              <a
+                class="border-b-2 border-solid border-white hover:border-green-500"
+                href="/courses/bhm"
+                >BHM</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="text-lg font-semibold relative group">
+          <a
+            href="#"
+            class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
+            >Student-Corner</a
+          >
+          <ul
+            id="ignore"
+            class="fixed bg-[#052c65] hidden group-hover:block py-2 px-4 z-50"
+          >
+            <li class="my-2">
+              <a
+                class="border-b-2 border-solid border-white hover:border-green-500"
+                href="/student-corner/library"
+                >Library</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="text-lg font-semibold">
+          <a
+            class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
+            href="/gallery"
+            >Gallery</a
+          >
+        </li>
+        <li class="text-lg font-semibold">
+          <a
+            class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
+            href="/placements"
+            >Placements</a
+          >
+        </li>
+        <li class="text-lg font-semibold">
+          <a
+            class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
+            href="/media"
+            >Media</a
+          >
+        </li>
+        <li class="text-lg font-semibold">
+          <a
+            class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
+            href="/blogs"
+            >Blogs</a
+          >
+        </li>
+        <!-- Handling login and logout -->
+        <li class="login-logout text-lg font-semibold" id="handledbl"></li>
+
+        <!-- <li class="text-lg font-semibold">
+          <a
+            class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
+            href="/login"
+            >Login</a
+          >/<a
+            class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
+            href="/register"
+            >Register</a
+          >
+        </li> -->
+      </ul>
+    </div>
+
+    <!-- mobile-menu -->
+
+    <div class="menu-bar md:hidden">
+      <div
+        id="bar"
+        class="text-3xl cursor-pointer px-3 border-2 border-solid border-gray-700 rounded"
+      >
+        <span class="text-black font-bold">&#9776;</span>
+      </div>
+    </div>
+    <div
+      id="mobile-menu"
+      class="mobile-menu p-8 top-0 right-0 fixed bg-black/80 w-4/5 h-full translate-x-full transition-all duration-1000 hidden"
+    >
+      <div id="hideMenu" class="absolute top-0 left-0 px-2 py-2 cursor-pointer">
+        ❌
+      </div>
+      <div class="wrapper">
+        <ul
+          class="menu-items flex gap-y-4 flex-col justify-center items-center"
+        >
+          <li class="text-lg font-bold hover:text-green-600">
+            <a id="active-class" class="text-green-600" href="/">Home</a>
+          </li>
+          <li class="text-lg font-bold hover:text-green-600">
+            <a href="/about-us">About</a>
+          </li>
+          <li class="text-lg font-bold hover:text-green-600">
+            <a href="/addmissions">Admissions</a>
+          </li>
+          <li class="text-lg font-bold hover:text-green-600">
+            <a href="/courses">Courses</a>
+          </li>
+          <li class="text-lg font-bold hover:text-green-600">
+            <a href="/placements">Placements</a>
+          </li>
+          <li class="text-lg font-bold hover:text-green-600">
+            <a href="/media">Media</a>
+          </li>
+          <li class="text-lg font-bold hover:text-green-600">
+            <a href="/blogs">Blogs</a>
+          </li>
+          <li class="text-lg font-bold hover:text-green-600">
+            <a href="/contact-us">Contact</a>
+          </li>
+          <li class="text-lg font-bold" id="handlembl">
+            <!-- <a class="hover:text-green-600" href="/login">Login</a>/<a
+              class="hover:text-green-600"
+              href="/register"
+              >signup</a
+            > -->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- PopUp Window -->
+<% if (locals.alert) { %> <%- include('../popup/successpopup') %> <% } %>
+
+<script>
+  const accessToken = document.cookie.includes("userId");
+  const loginBtn = document.querySelector("#handledbl");
+  const mLoginBtn = document.querySelector("#handlembl");
+  // console.log(accessToken);
+  if (accessToken) {
+    // console.log("accessToken hai");
+    // console.log(loginBtn);
+    loginBtn.innerHTML = `<a
+    class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
+    href="/api/users/logout"
+    >Logout</a>
+  `;
+
+    mLoginBtn.innerHTML = `<a class="hover:text-green-600" href="/api/users/logout">Logout</a>`;
+  } else {
+    loginBtn.innerHTML = `
+      <a
+        class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
+        href="/login"
+        >Login</a
+      >/<a
+        class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
+        href="/register"
+        >Register</a
+      >
+    `;
+
+    mLoginBtn.innerHTML = `
+    <a class="hover:text-green-600" href="/login">Login</a>/<a
+    class="hover:text-green-600"
+    href="/register"
+    >signup</a
+  >`;
+  }
+</script>

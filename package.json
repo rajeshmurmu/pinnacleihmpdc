@@ -1,0 +1,31 @@
+{
+  "name": "pinnacleihm",
+  "version": "1.0.0",
+  "description": "a pinnacle website",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/index",
+    "dev": "nodemon -r dotenv/config --experimental-modules ./src/index",
+    "tail": "npx tailwindcss -i ./public/styles/input.css -o ./public/styles/style.css --watch"
+  },
+  "keywords": [
+    "pinnacleihm",
+    "pinnacledc"
+  ],
+  "author": "rajesh murmu",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.3",
+    "nodemailer": "^6.9.13"
+  }
+}

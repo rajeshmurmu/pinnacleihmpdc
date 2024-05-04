@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+  <body class="box-border font-[Poppins]">
+    <!-- Navbar of the Website -->
+    <%- include('./partials/navbar') %>
+
+    <!-- Notification section -->
+    <div
+      class="wrapper w-full bg-orange-500 border-y-2 border-solid border-t-red-500 border-b-red-500"
+    >
+      <div class="text-center text-lg font-normal">
+        All Notification will come here.
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <!-- <div
+      class="hero-section min-h-[300px] md:h-[550px] w-full border-2 border-solid border-green-500"
+    >
+      <div class="h-full w-full">
+        <img
+          class="h-full w-full"
+          src="https://pinnacleihm.com/wp-content/uploads/2024/02/2022-to-2023.png"
+          alt="Hero img"
+        />
+      </div>
+    </div> -->
+
+    <!-- Carousel -->
+    <div class="carousel-section"><%- include('./partials/carousel') %></div>
+
+    <!-- Home Content -->
+    <!-- About the college section -->
+    <section class="about-college py-8 w-full">
+      <div class="">
+        <h1 class="text-3xl font-bold text-center">About The College</h1>
+      </div>
+
+      <hr
+        class="my-5 h-px md:h-[2px] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-25 dark:opacity-100"
+      />
+
+      <div
+        class="about-content flex flex-wrap box-border px-4 gap-y-2 md:gap-0 justify-center"
+      >
+        <div class="img md:w-1/2 rounded overflow-hidden">
+          <img
+            src="https://pinnacleihm.com/wp-content/uploads/2019/05/apply-01.png"
+            alt=""
+          />
+        </div>
+        <div class="content md:px-4 h-full md:w-1/2">
+          <p class="md:text-lg font-normal py-1 md:py-3">
+            Pinnacle made a humble beginning in 2001 with the endeavor to create
+            “True Hospitality Professionals” who are in great demand rather than
+            people with mere paper qualifications in 700sft with 7 students by
+            offering just one course – a diploma in Hotel management. At
+            Pinnacle over the years many things changed but one thing that
+            remains unchanged is
+            <strong>Pinnacles Quest for Quality Education</strong>.
+          </p>
+          <p class="md:text-lg font-normal py-1 md:py-3">
+            Pinnacles Quest for Quality Education has yielded rich dividends, it
+            is ranked as the No#1 college in Telangana from the past 5 years
+            2017 to 2021 not only for excellence in education ,but also for
+            giving excellent placements, state-of-the -art campuses, pedagogy,
+            to name a few. This rank was accorded by non-other than the
+            country’s largest circulated newspaper the Times of India.
+          </p>
+          <a href="/about-us">
+            <button
+              class="px-3 mt-5 md:mt-10 py-2 rounded bg-blue-600 font-normal text-lg"
+            >
+              Read More
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <%- include('./partials/footer') %>
+
+    <!-- Script Start From Here -->
+    <%- include('./scripts/script') %>
+  </body>
+</html>

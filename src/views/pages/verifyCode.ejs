@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <div class="w-full h-screen bg-black/85 flex justify-center items-center">
+      <div class="md:w-1/5 h-auto mx-auto bg-slate-700 rounded-md py-10 px-10">
+        <!-- Verify email box -->
+        <%- include('../popup/verifyemail') %>
+      </div>
+    </div>
+
+    <!-- PopUp Window -->
+    <% if (locals.alert) { %> <%- include('../popup/successpopup') %> <% } %>
+  </body>
+</html>

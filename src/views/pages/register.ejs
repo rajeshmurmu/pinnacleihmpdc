@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <!-- Navbar -->
+    <%- include('../partials/navbar') %>
+
+    <!-- Register Form -->
+    <%- include('../partials/registerform') %>
+
+    <!-- Footer -->
+    <%- include('../partials/footer') %>
+
+    <!-- PopUp Window -->
+    <% if (locals.alert) { %> <%- include('../popup/successpopup') %> <% } %>
+  </body>
+</html>

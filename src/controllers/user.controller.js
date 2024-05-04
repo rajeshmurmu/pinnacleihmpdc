@@ -49,7 +49,7 @@ const registerUser = async (req, res) => {
 
     return res.status(201).render("pages/register", {
       alert: "Register Successfully || Please verify your email",
-      redirectUrl: "/login",
+      redirectUrl: "/verifyemail",
     });
   } catch (error) {
     console.log(`Error while registering user`, error);

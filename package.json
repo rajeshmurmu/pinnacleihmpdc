@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "build": "webpack",
     "start": "node ./src/index",
     "dev": "nodemon -r dotenv/config --experimental-modules ./src/index",
     "tail": "npx tailwindcss -i ./public/styles/input.css -o ./public/styles/style.css --watch"

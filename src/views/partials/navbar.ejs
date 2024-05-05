@@ -11,7 +11,7 @@
   class="bg-[#052c65] sticky -top-1 z-[1000] text-white w-full overflow-hidden"
 >
   <div
-    class="nav-wrapper flex justify-end md:justify-center px-8 py-4 items-center"
+    class="nav-wrapper flex justify-end lg:justify-center px-8 py-4 items-center"
   >
     <!-- this code is commented to hide the navbar logo -->
     <!-- <div class="logo-container">
@@ -25,37 +25,37 @@
         </a>
       </div>
     </div> -->
-    <div class="menu-wrapper hidden md:block">
+    <div class="menu-wrapper hidden lg:block">
       <ul class="menu-items flex gap-x-4 justify-center items-center">
-        <li class="text-lg font-semibold">
+        <li class="xl:text-lg font-semibold">
           <a
             class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700 text-green-600"
             href="/"
             >Home</a
           >
         </li>
-        <li class="text-lg font-semibold">
+        <li class="xl:text-lg font-semibold">
           <a
             class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
             href="/about-us"
             >About</a
           >
         </li>
-        <li class="text-lg font-semibold">
+        <li class="xl:text-lg font-semibold">
           <a
             class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
             href="/contact-us"
             >Contact</a
           >
         </li>
-        <li class="text-lg font-semibold">
+        <li class="xl:text-lg font-semibold">
           <a
             class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
             href="/addmissions"
             >Admissions</a
           >
         </li>
-        <li class="text-lg font-semibold relative group">
+        <li class="xl:text-lg font-semibold relative group">
           <a
             class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
             href="/courses"
@@ -102,7 +102,7 @@
             </li>
           </ul>
         </li>
-        <li class="text-lg font-semibold relative group">
+        <li class="xl:text-lg font-semibold relative group">
           <a
             href="#"
             class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
@@ -121,28 +121,28 @@
             </li>
           </ul>
         </li>
-        <li class="text-lg font-semibold">
+        <li class="xl:text-lg font-semibold">
           <a
             class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
             href="/gallery"
             >Gallery</a
           >
         </li>
-        <li class="text-lg font-semibold">
+        <li class="xl:text-lg font-semibold">
           <a
             class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
             href="/placements"
             >Placements</a
           >
         </li>
-        <li class="text-lg font-semibold">
+        <li class="xl:text-lg font-semibold">
           <a
             class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
             href="/media"
             >Media</a
           >
         </li>
-        <li class="text-lg font-semibold">
+        <li class="xl:text-lg font-semibold">
           <a
             class="pb-2 hover:border-b-[3px] hover:border-solid hover:border-green-700"
             href="/blogs"
@@ -168,7 +168,7 @@
 
     <!-- mobile-menu -->
 
-    <div class="menu-bar md:hidden">
+    <div class="menu-bar lg:hidden">
       <div
         id="bar"
         class="text-3xl cursor-pointer px-3 border-2 border-solid border-gray-700 rounded"
@@ -184,9 +184,7 @@
         ❌
       </div>
       <div class="wrapper">
-        <ul
-          class="menu-items flex gap-y-4 flex-col justify-center items-center"
-        >
+        <ul class="menu-items flex gap-y-4 flex-col">
           <li class="text-lg font-bold hover:text-green-600">
             <a id="active-class" class="text-green-600" href="/">Home</a>
           </li>
@@ -196,9 +194,86 @@
           <li class="text-lg font-bold hover:text-green-600">
             <a href="/addmissions">Admissions</a>
           </li>
-          <li class="text-lg font-bold hover:text-green-600">
+          <!-- <li class="text-lg font-bold hover:text-green-600">
             <a href="/courses">Courses</a>
+          </li> -->
+
+          <!-- Nested nav item -->
+          <li class="text-lg font-bold group">
+            <a href="#" class="">Courses</a>
+            <ul
+              id="ignore"
+              class="bg-[#052c65] h-0 overflow-hidden group-hover:h-auto px-4 z-50 rounded"
+            >
+              <li class="my-2 h-full">
+                <a
+                  class="border-b-2 border-solid border-white hover:border-green-500"
+                  href="/courses/bca"
+                  >BCA</a
+                >
+              </li>
+              <li class="my-2 h-full">
+                <a
+                  class="border-b-2 border-solid border-white hover:border-green-500"
+                  href="/courses/bcom"
+                  >B.Com</a
+                >
+              </li>
+              <li class="my-2 h-full">
+                <a
+                  class="border-b-2 border-solid border-white hover:border-green-500"
+                  href="/courses/bsc"
+                  >B.Sc</a
+                >
+              </li>
+              <li class="my-2 h-full">
+                <a
+                  class="border-b-2 border-solid border-white hover:border-green-500"
+                  href="/courses/bhm"
+                  >BHM</a
+                >
+              </li>
+              <li class="my-2 h-full">
+                <a
+                  class="border-b-2 border-solid border-white hover:border-green-500"
+                  href="/courses/bhmct"
+                  >BHMCT</a
+                >
+              </li>
+            </ul>
           </li>
+
+          <!-- Nested nav item -->
+          <li class="text-lg font-bold group">
+            <a href="#" class="">Student-Corner</a>
+            <ul
+              id="ignore"
+              class="bg-[#052c65] h-0 overflow-hidden group-hover:h-auto px-4 z-50 rounded"
+            >
+              <li class="my-2 h-full">
+                <a
+                  class="border-b-2 border-solid border-white hover:border-green-500"
+                  href="/student-corner/library"
+                  >Library</a
+                >
+              </li>
+              <li class="my-2 h-full">
+                <a
+                  class="border-b-2 border-solid border-white hover:border-green-500"
+                  href="/student-corner/library"
+                  >eBooks</a
+                >
+              </li>
+              <li class="my-2 h-full">
+                <a
+                  class="border-b-2 border-solid border-white hover:border-green-500"
+                  href="/student-corner/library"
+                  >Notes</a
+                >
+              </li>
+            </ul>
+          </li>
+
           <li class="text-lg font-bold hover:text-green-600">
             <a href="/placements">Placements</a>
           </li>

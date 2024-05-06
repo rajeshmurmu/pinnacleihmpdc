@@ -20,15 +20,16 @@ const verifyUser = async (req, res, next) => {
     const user = await User.findById(decodedToken?._id).select("-password");
 
     if (!user) {
+      return next();
     }
 
     req.user = user;
-    next();
+    return next();
   } catch (error) {
-    next();
+    return next(error);
   }
 
-  next();
+  return next();
 };
 
 export default verifyUser;

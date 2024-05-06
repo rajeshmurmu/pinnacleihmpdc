@@ -6,6 +6,7 @@ import express, { urlencoded } from "express";
 import { fileURLToPath } from "url";
 import path, { dirname, join } from "path";
 import cookieParser from "cookie-parser";
+import verifyUser from "./middlewares/auth.middleware.js";
 
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
@@ -41,7 +42,12 @@ app.use("/student-corner", studentCornerRoutes);
 import adminRoutes from "./routes/admin.routes.js";
 app.use("/admin", adminRoutes);
 
+// This routes for upload anythings
+import uploadRoutes from "./routes/upload.routes.js";
+app.use("/api/v1/files/upload", uploadRoutes);
+
 //testing routes
+import testingRoutes from "./routes/test.routes.js";
 import sendEmail from "./utils/sendEmail.js";
 app.get("/test", async (req, res) => {
   // console.log(req.ip);

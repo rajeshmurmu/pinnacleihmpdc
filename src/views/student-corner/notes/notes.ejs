@@ -2,10 +2,190 @@
 <html lang="en">
   <%- include('../../partials/head') %>
   <body>
+    <!-- Navbar -->
     <%- include('../../partials/navbar') %>
-    <h1>I am the Notes Page</h1>
-    <button>
-      <a href="/student-corner/notes/upload">Click me to upload</a>
-    </button>
+
+    <!-- Notes section -->
+    <section class="notes my-10 px-2">
+      <h1 class="text-center xl:text-3xl font-bold">Notes</h1>
+      <div
+        class="my-5 bg-slate-800 xl:w-4/6 min-h-72 m-auto p-4 xl:p-8 rounded"
+      >
+        <!-- Table Data For Big Screen -->
+
+        <div
+          class="relative overflow-x-auto hidden xl:block shadow-md sm:rounded-lg"
+        >
+          <table
+            class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+          >
+            <thead
+              class="text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+            >
+              <tr>
+                <th scope="col" class="px-6 py-3">Title</th>
+                <th scope="col" class="px-6 py-3">Subject</th>
+                <th scope="col" class="px-6 py-3">Course</th>
+                <th scope="col" class="px-6 py-3">Semister</th>
+                <th scope="col" class="px-6 py-3">Unit</th>
+                <th scope="col" class="px-6 py-3">
+                  <span class="sr-only">View</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if (locals.notes) { %> <% notes.forEach(note => { %>
+              <tr
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+              >
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  <%= note.title || "NA" %>
+                </th>
+                <td class="px-6 py-4"><%= note.subject || "NA" %></td>
+                <td class="px-6 py-4"><%= note.course || "NA" %></td>
+                <td class="px-6 py-4"><%= note.semister || "NA" %></td>
+                <td class="px-6 py-4"><%= note.unit || "NA" %></td>
+                <td class="px-6 py-4 text-right">
+                  <a
+                    href="<%= note.notesUrl %>"
+                    target="_blank"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    >View</a
+                  >
+                </td>
+              </tr>
+              <% }) %> <% } else { %>
+              <!-- Notes Not found -->
+              <tr
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+              >
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  <%= locals.notes.title || "NA" %>
+                </th>
+                <td class="px-6 py-4"><%= locals.notes.subject || "NA" %></td>
+                <td class="px-6 py-4"><%= locals.notes.course || "NA" %></td>
+                <td class="px-6 py-4"><%= locals.notes.semister || "NA" %></td>
+                <td class="px-6 py-4"><%= locals.notes.unit || "NA" %></td>
+                <td class="px-6 py-4 text-right">
+                  <a
+                    href="<%= locals.notes.notesUrl %>"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    target="_blank"
+                    >View</a
+                  >
+                </td>
+              </tr>
+
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Notes For Small Size Screen -->
+
+        <div class="smscreen flex justify-center gap-2 flex-wrap xl:hidden">
+          <% if (locals.notes) { %> <% notes.forEach(note => { %>
+          <div
+            class="min-w-72 max-w-72 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
+            <div class="flex flex-col gap-y-2">
+              <div class="flex justify-between items-center">
+                <p>Title</p>
+                <p class="text-gray-700 dark:text-gray-400">
+                  <%= note.title || "NA" %>
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center">
+                <p>Subject</p>
+                <p class="text-gray-700 dark:text-gray-400">
+                  <%= note.subject || "NA" %>
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center">
+                <p>Course</p>
+                <p class="text-gray-700 dark:text-gray-400">
+                  <%= note.course || "NA" %>
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center">
+                <p>Semister</p>
+                <p class="text-gray-700 dark:text-gray-400">
+                  <%= note.semister || "NA" %>
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center">
+                <p>Unit</p>
+                <p class="text-gray-700 dark:text-gray-400">
+                  <%= note.unit || "NA" %>
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center">
+                <p>UploadedBy</p>
+                <% let name = note.uploadedBy.firstName + " " +
+                note.uploadedBy.lastName %>
+                <p class="text-gray-700 dark:text-gray-400"><%= name %></p>
+              </div>
+
+              <a
+                target="_blank"
+                href="<%= note.notesUrl %>"
+                class="px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 textc"
+              >
+                View
+              </a>
+            </div>
+          </div>
+
+          <% }) %> <% } else { %>
+          <div
+            class="max-w-72 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
+            <div class="flex flex-col gap-y-2">
+              <h5
+                class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+              >
+                Title
+              </h5>
+
+              <p class="font-normal text-gray-700 dark:text-gray-400">
+                subject
+              </p>
+              <p>Course</p>
+              <p>Semister</p>
+              <p>Semister</p>
+              <p>Unit</p>
+              <p>Unit</p>
+              <p>UploadedBy</p>
+              <a
+                href="#"
+                class="px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 textc"
+              >
+                View
+              </a>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+      <div class="flex justify-center items-center">
+        <button class="bg-blue-500 px-3 py-3 rounded-md">
+          <a href="/student-corner/notes/upload">Want to Contribute</a>
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <%- include('../../partials/footer') %>
   </body>
 </html>

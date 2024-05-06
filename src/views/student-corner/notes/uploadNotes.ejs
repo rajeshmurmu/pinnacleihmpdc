@@ -2,7 +2,131 @@
 <html lang="en">
   <%- include('../../partials/head') %>
   <body>
+    <!-- Navbar -->
     <%- include('../../partials/navbar') %>
-    <h1>I am the upload notes Page</h1>
+    <section class="px-4">
+      <div
+        class="upload-notes bg-slate-800 w-full xl:w-4/6 rounded-md mx-auto my-10 p-10 flex justify-center items-center"
+      >
+        <form
+          action="/api/v1/files/upload/notes"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <!-- Drop-Zone feature plan -->
+
+          <!-- input-zone -->
+
+          <!-- notes title -->
+          <div class="mb-5">
+            <label
+              for="title"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Note Title</label
+            >
+            <input
+              type="text"
+              id="title"
+              name="title"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+          </div>
+
+          <!-- Subject -->
+          <div class="mb-5">
+            <label
+              for="subject"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Notes is related to which subject</label
+            >
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+          </div>
+
+          <!-- Semister -->
+          <div class="mb-5">
+            <label
+              for="semister"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Notes is belongs to which semister</label
+            >
+            <input
+              type="text"
+              id="semister"
+              name="semister"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+          </div>
+
+          <!-- Unit -->
+          <div class="mb-5">
+            <label
+              for="unit"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Notes is related to which unit</label
+            >
+            <input
+              type="text"
+              id="unit"
+              name="unit"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+          </div>
+
+          <!-- Course -->
+          <div class="mb-5">
+            <label
+              for="course"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Notes is related to which course</label
+            >
+            <input
+              type="text"
+              id="course"
+              name="course"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+          </div>
+
+          <!-- file input -->
+          <div class="mb-5">
+            <label
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              for="file_input"
+              >Upload file</label
+            >
+            <input
+              class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+              aria-describedby="file_input_help"
+              id="file_input"
+              type="file"
+              name="notes"
+            />
+            <p
+              class="mt-1 text-sm text-gray-500 dark:text-gray-300"
+              id="file_input_help"
+            >
+              SVG, PNG, JPG or GIF (MAX. 800x400px).
+            </p>
+          </div>
+
+          <div class="my-8">
+            <button type="submit" class="bg-blue-500 px-3 py-2 rounded-md">
+              Upload Now!
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- PopUp Window -->
+    <% if (locals.alert) { %> <%- include('../../popup/successpopup') %> <% } %>
+
+    <!-- Footer -->
+    <%- include('../../partials/footer') %>
   </body>
 </html>

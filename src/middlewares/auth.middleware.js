@@ -9,7 +9,7 @@ const verifyUser = async (req, res, next) => {
   if (!token) {
     // return res.redirect("/login");
     return res.render("pages/login", {
-      alert: "Please Login to upload notes",
+      alert: "Please Login To Continue",
       redirectUrl: "/login",
     });
   }

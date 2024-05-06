@@ -33,9 +33,9 @@ app.use("/courses", coursesRoutes);
 import userRoutes from "./routes/user.routes.js";
 app.use("/api/users", userRoutes);
 
-// Library routes
-import libraryRoutes from "./routes/library.routes.js";
-app.use("/student-corner/library", libraryRoutes);
+// Student-corner routes
+import studentCornerRoutes from "./routes/studentcorner.routes.js";
+app.use("/student-corner", studentCornerRoutes);
 
 // Admin routes
 import adminRoutes from "./routes/admin.routes.js";

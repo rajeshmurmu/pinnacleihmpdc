@@ -102,7 +102,7 @@ const loginUser = async (req, res) => {
   }
 };
 
-const verifyUser = async (req, res) => {
+const verifyEmail = async (req, res) => {
   const { verifycode } = req.body;
   console.log(verifycode);
   if (!verifycode) {
@@ -139,4 +139,4 @@ const verifyUser = async (req, res) => {
   }
 };
 
-export { registerUser, loginUser, verifyUser };
+export { registerUser, loginUser, verifyEmail };

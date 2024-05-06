@@ -2,7 +2,7 @@ import express from "express";
 import {
   registerUser,
   loginUser,
-  verifyUser,
+  verifyEmail,
 } from "../controllers/user.controller.js";
 
 const router = express.Router();
@@ -26,6 +26,6 @@ router.route("/logout").get((req, res) => {
   // .redirect("/");
 });
 
-router.route("/verify").post(verifyUser);
+router.route("/verify").post(verifyEmail);
 
 export default router;

@@ -1,4 +1,4 @@
-// logic for mobile menu show and hide
+// logic-for-mobile-menu-show-and-hide
 const showMenuBtn = document.getElementById("bar");
 const menu = document.getElementById("mobile-menu");
 const hideMenuBtn = document.getElementById("hideMenu");

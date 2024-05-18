@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "webpack",
+    "build:digitalocean": "npm install --production=false && npm run build && npm ci",
     "start": "node ./src/index",
     "dev": "nodemon -r dotenv/config --experimental-modules ./src/index",
     "tail": "npx tailwindcss -i ./public/styles/input.css -o ./public/styles/style.css --watch"
